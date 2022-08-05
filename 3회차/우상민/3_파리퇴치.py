@@ -6,7 +6,7 @@ T = int(input())
 for T in range(1, T+1):
     N, M = map(int,(input().split()))
     total = 0
-    matrix_ = []
+    matrix_ = []  
     for i in range(1, N+1):  #1 ~ 5
         matrix_.append(list(map(int, (input().split()))))
     for idx in (range((N-(M-1)))):  # 0 ~ 3
