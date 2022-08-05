@@ -1,6 +1,6 @@
-#import sys
+import sys
 
-#sys.stdin = open("_파리퇴치.txt")
+sys.stdin = open("_파리퇴치.txt")
 
 T = int(input())
 for T in range(1, T+1):

@@ -1,6 +1,6 @@
-# import sys
+import sys
 
-# sys.stdin = open("_조교의성적매기기.txt")
+sys.stdin = open("_조교의성적매기기.txt")
 T = int(input())
 for C in range(1 ,T+1):
     matrix_ = []
