@@ -3,8 +3,9 @@ import sys
 sys.stdin = open("_파리퇴치.txt")
 
 T = int(input())
-result =[]
+
 for i in range(1,T+1):
+    result =[]
     N,M = map(int,input().split())
     matrix = list(list(map(int,input().split())) for _ in range(N))
     
