@@ -10,6 +10,6 @@ for i in range(1, T+1):
     unsub = list(map(str, range(1, stu+1)))
     
     for j in number:
-        unsub.remove(str(j))
+        unsub.remove(str(j)) 
     result = ' '.join(unsub)
     print(f'#{i} {result}')
