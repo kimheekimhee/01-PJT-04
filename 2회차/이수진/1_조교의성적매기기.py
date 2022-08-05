@@ -23,4 +23,8 @@ for i in range(tc):
     result.sort()
     print(f'#{i+1}',result[student-1][1])
     
+    # {학생번호:성적,...} 형식의 딕셔너리를 성적순으로 정렬함
+    # 학생 수가 n명이라면 각 등급은 (n//10)개씩 존재함
+    # 학생번호와 등급을 result리스트에 저장함
+    
 

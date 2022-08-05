@@ -8,3 +8,4 @@ for t in range(tc):
     students=set(i for i in range(1,n+1))
     submitted=set(map(int, input().split()))
     print(f'#{t+1}',*list(sorted(students-submitted)))
+#set의 차집합 사용하여 풀이함

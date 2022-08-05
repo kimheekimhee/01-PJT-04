@@ -22,3 +22,8 @@ for t in range(10):
                 flag = False
                 break
     print(f'#{t+1} {1 if flag else 0}')
+
+    # 스택 활용
+    # 열린괄호가 나오면 스택에 push한다
+    # 닫힌괄호가 나오면 스택의 열린괄호를 pop하고, 두 열림-닫힘 괄호가 같은 종류인지 검사
+    # 서로 다른 종류일 경우 0이 출력된다.
