@@ -26,7 +26,7 @@ for _ in range(T):
                     cnt_sum += 1
                 cnt = 0
     
-    for a in range(N):
+    for a in range(N): #세로로 둘러보기
         for b in range(N): #NN배열 둘러보기
             if NN[b][a]  == 1:  
                 cnt += 1                        
