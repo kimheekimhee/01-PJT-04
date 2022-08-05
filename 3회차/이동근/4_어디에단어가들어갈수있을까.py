@@ -9,6 +9,7 @@ for i in range(T):
         for k in range(N):
             col[j] += grid[k][j]
 
+    # 행과 열 같이 탐색
     count = 0
     for j in range(N):
         row_count = 0
