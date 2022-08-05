@@ -26,4 +26,3 @@ for i in answer:
         print(k,end=' ')
     print()
 
-
