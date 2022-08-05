@@ -68,8 +68,8 @@ for test_case in range(1, 11):
                 else:
                     ans = 0
                 break
-        if ans == 0:
-            break
+        if ans == 0:            # 와 이 문장 안 넣어서 6번 테스트케이스만 틀렸다고 나와서 breakpoint로 138개짜리 반복문 디버깅 했어요..............
+            break               # 살려주세여 힘들어요
     tmp = 0
     for i in list_:
         tmp += len(i)

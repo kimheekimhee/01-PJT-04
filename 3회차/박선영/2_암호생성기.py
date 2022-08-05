@@ -6,7 +6,7 @@ test_case = 0
 while 1:
     try:
         T = int(input())
-    except EOFError:
+    except EOFError:                         # 테스트 케이스 수가 안나와있어서 EOF처리 하는 방법만 구글링 해써요 죄송..
         break
     test_case += 1
 
