@@ -1,7 +1,7 @@
-import sys
 from collections import deque
+import sys
 
-sys.stdin = open("_암호생성기.txt")
+sys.stdin = open("test.txt")
 
 for _ in range(10):
 
