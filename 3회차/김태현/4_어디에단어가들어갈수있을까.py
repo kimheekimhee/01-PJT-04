@@ -26,27 +26,26 @@ for t in range(1, T+1):
         x_cnt_list = []
         y_cnt_list = []
         for j in range(N):
+
             # 가로
             if matrix[i][j] == 1:
                 x_cnt += 1
-                x_cnt_list.append(x_cnt)
             else:
+                x_cnt_list.append(x_cnt)
                 x_cnt = 0
 
 
             # 세로
             if matrix[j][i] == 1:
                 y_cnt += 1
-                y_cnt_list.append(y_cnt)
             else:
+                y_cnt_list.append(y_cnt)
                 y_cnt = 0
-                
-        if max(x_cnt_list) == 3:
-            result[0] += 1
-        if max(y_cnt_list == 3):
-            result[1] += 1
-            
-        print(x_cnt_list)
-        print(y_cnt_list)
-        print("===========")
-    print("***********")
+        
+        x_cnt_list.append(x_cnt)
+        y_cnt_list.append(y_cnt)
+
+        result[0] += x_cnt_list.count(K)
+        result[1] += y_cnt_list.count(K)
+
+    print(f"#{t} {sum(result)}")
