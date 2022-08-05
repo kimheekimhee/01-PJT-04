@@ -6,33 +6,16 @@ for i in range(1, T+1):
     cast = int(input())
     bracket = input()
     result = []
+    open = ['<', '(', '{', '[']
+    close = ['>', ')', '}', ']']
+    cnt = 1
     for j in bracket:
-        if j in '(<[{':
+        if j in open:
             result.append(j)
-        elif j == ')':
-            if result[-1] == '(':
+        else:
+            if open.index(result[-1]) == close.index(j):
                 result.pop()
             else:
-                print(f'#{i}', 0)
+                cnt = 0
                 break
-        elif j == '>':
-            if result[-1] == '<':
-                result.pop()
-            else:
-                print(f'#{i}', 0)
-                break
-        elif j == '}':
-            if result[-1] == '{':
-                result.pop()
-            else:
-                print(f'#{i}', 0)
-                break      
-        elif j == ']':
-            if result[-1] == '[':
-                result.pop()
-            else:
-                print(f'#{i}', 0)
-                break
-    if len(result) == 0:
-        print(f'#{i}', 1)
-     
+    print(f'#{i}', cnt)
