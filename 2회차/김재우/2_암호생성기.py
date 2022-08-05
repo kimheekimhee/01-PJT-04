@@ -4,24 +4,23 @@ sys.stdin = open("_암호생성기.txt")
 
 T = 10
 
-for tc in range(T):
+for tc in range(1, T+1):
     tc_list = input()
     num = list(map(int, input().split()))
     minus = 1
-    while num[7] != 0:
+    
+    while True:
+        
         if minus > 5:
             minus = 1
         
-        if num.pop(0) < 0:
-            num.pop = 0
+        num.append(num.pop(0) - minus)
+
+        if num[7] <= 0:
+            num[7] = 0
             break
-        
-        num.append(num.pop(0)-minus)
 
         minus += 1
-
-        if num < 0:
-            num[7] = 0 
-
     
-    print(num)
+    print(f'#{tc}', end =' ')
+    print(*num)
