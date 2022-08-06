@@ -2,50 +2,56 @@ import sys
 
 sys.stdin = open("_괄호짝짓기.txt")
 
-n = int(input())
-li = []
-for i in range(n):
-    nn = input()
+
+for i in range(1,11):
+    n = int(input())
+    garo = input()
     co = True
-    for ch in nn:
-        if ch == '(':
+    li = []
+    for j in garo:
+        if '(' == j:
             li.append('(')
-        if ch == ')':
-            if li:
-                li.pop()
-            elif not li:
+         
+        elif ")" == j:
+            if '(' in li:
+              li.remove('(')
+          
+            elif '(' not in li:
                 co = False
                 break
-        if ch == '[':
+        if '[' == j:
             li.append('[')
-        if ch == ']':
-            if li:
-                li.pop()
-            elif not li:
+            
+        elif "]" == j:
+            if '[' in li:
+              li.remove('[')
+             
+            elif '[' not in li:
                 co = False
                 break
-        if ch == '{':
-            li.append('{')
-        if ch == '}':
-            if li:
-                li.pop()
-            elif not li:
-                co = False
-                break
-        if ch == '<':
+        if '<' == j:
             li.append('<')
-        if ch == '>':
-            if li:
-                li.pop()
-            elif not li:
+           
+        elif ">" == j:
+            if '<' in li:
+              li.remove('<')
+             
+            elif '<' not in li:
                 co = False
                 break
-    if not li and co:
-        print('YES')
-    elif li or not co:
-        print('NO')
+        if '{' == j:
+            li.append('{')
+            
+        elif "}" == j:
+            if '{' in li:
+              li.remove('{')
+             
+            elif '{' not in li:
+                co = False
+                break
 
-        
-
-
-    
+    print(li)
+    if co == True and len(li) == 0:
+        print(f'#{i} 1')   
+    else:
+        print(f'#{i} 0')
