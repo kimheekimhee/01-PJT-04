@@ -1,5 +1,5 @@
 import sys
-
+from pprint import pprint
 sys.stdin = open("_파리퇴치.txt")
 
 # 2차원 리스트 안에 파리의 수의 합을 구해주는 함수
