@@ -10,7 +10,13 @@ for t in range(1, T+1):
     result = []
     n, k = list(map(int, input().split()))
     arr = list(map(int, input().split()))
-
+    
+    # 방법 1
+    for i in range(1, n+1): # 원래 이렇게 풀면되는 간단한 문제
+        if i not in arr:
+            result.append(i)
+            
+    # 방법 2 
     matrix = [0] * n # 0이 수강생 수만큼 있는 이루어진 리스트를 만들어 준다 [0, 0, 0, 0, 0]
 
     for i in range(n):
