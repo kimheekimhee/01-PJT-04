@@ -23,8 +23,12 @@ for t in range(1, T+1):
 
     n_gp = n // 10
 
-    cnt = 0
-    
+    for i in range(n):
+        if k == score_li[i][1]:
+            idx = i // n_gp
+            print(f'#{t} {gp[idx]}')
+
+        
         
 
     # cnt = 0
