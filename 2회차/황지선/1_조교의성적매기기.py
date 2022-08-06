@@ -3,10 +3,7 @@
 
 import copy
 
-dict = {
-    0: 'A+', 1: 'A0', 2: 'A-', 3: 'B+', 4: 'B0', 
-    5: 'B-', 6: 'C+', 7: 'C0', 8: 'C-', 9: 'D0'
-    }
+grade = ['A+', 'A0', 'A-', 'B+', 'B0', 'B-', 'C+', 'C0', 'C-', 'D0']
 
 # 입력은 첫 줄에 총 테스트 케이스의 개수 T가 온다.
 T = int(input())
@@ -21,14 +18,12 @@ for t in range(1, T+1):
         matrix[x] = matrix[x][0] * 0.35 + matrix[x][1] * 0.45 + matrix[x][2] * 0.2
 
     # 총점 리스트 만들어서 소트한 다음에 저장해두고
-    sum_list = []
     sum_list = sorted(copy.deepcopy(matrix))
     sum_list.reverse()
 
     # sum_list로 가서 총점 넣고 해당 인덱스 불러오고
     # 인덱스에 공식 만들어서 대입해야하는데 머리가 안돌아가서 계산을 못하겠다..!
-    res_index = sum_list.index(matrix[K-1])
+    # 였는데 학생수 // 10 으로 나누기만 하면 됐다... (예상했던대로)
+    res_index = sum_list.index(matrix[K-1]) // (N//10)
 
-    print(f'#{t} {dict[res_index]}')
-
-# 여기까지는 10명일때만 가능함!
+    print(f'#{t} {grade[res_index]}')
