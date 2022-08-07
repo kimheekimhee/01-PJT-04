@@ -19,6 +19,5 @@ for C in range(1, 11):
                 matrix_2.append(int(N) - count)
     print(f'#{C}', matrix_2)
     
-        # for i in range(10):
     
 
