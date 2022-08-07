@@ -73,4 +73,4 @@ for C in range(1 ,T+1):
         if rank[M-1] == Two[search]:
             print(f'#{C}', answer[search])  
 
-#3회차 알고리즘 테스트 2번 4번 피드백을 응용하여 풀었습니다.
+#3회차 알고리즘 테스트 2번 4번 피드백을 생각하며 풀어보았습니다.
