@@ -5,6 +5,7 @@ sys.stdin = open("_민석이의과제체크하기.txt")
 T = int(input())
 
 for i in range(T):
+    # set으로 변경후 차집합 연산 활용
     number, assign = map(int, input().split())
     assign_list = set(map(int, input().split()))
     whole_list = set(range(1, number + 1))
