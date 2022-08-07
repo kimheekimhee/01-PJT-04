@@ -20,20 +20,22 @@ for test_case in range(1,T+1):
     num, where = map(int,input().split())
     scores = []
     for _ in range(num):
-        temp = list(map(int,input().split()))
+        temp = map(int,input().split())
+        temp = list(temp)
         scores.append(temp)
     std_total = []
     for score in scores:
-        mt = score[0]*35/100
-        ft = score[1]*45/100
-        sub = score[2]*20/100
+        mt = score[0]*0.35
+        ft = score[1]*0.45
+        sub = score[2]*0.2
         total = mt+ft+sub
         std_total.append(total)
     sort_std_total = sorted(std_total)
-    # print(std_total[id-1])
-    rank = sort_std_total.index(std_total[where-1])   # 정렬된 총점
-    grade = int(rank/num * 10)
+    std = std_total[where-1]
+    rank = sort_std_total.index(std)   # 정렬된 총점
+    grade = rank//(num//10)
     grade_lst = ['D0', 'C-', 'C0', 'C+', 'B-', 'B0', 'B+', 'A-', 'A0', 'A+']
     std_grd = grade_lst[grade]
     result = std_grd
-    print(f'#{test_case} ',result)
+    print(f'#{test_case}',result)
+    # 왜 맞 틀!!!! test_case 뒤에 띄어쓰기 한칸....

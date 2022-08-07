@@ -54,6 +54,7 @@ for test_case in range(1,T+1):
             word += 1
 
     result = word
-    print(f'#{test_case} ',result)
+    print(f'#{test_case}',result)
 
-    
+    # 왜 맞 틀!!!
+    # ㅋㅋㅋㅋ...#{test_case} 뒤에 띄어쓰기를 못보고 계속 왜맞틀을 외쳤습니다.
