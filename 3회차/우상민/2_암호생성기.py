@@ -10,8 +10,7 @@ for C in range(1, 11):
         count = 0
         for i in range(5):
             count += 1
-            N = matrix_2[0]
-            matrix_2.remove(N)
+            matrix_2.pop(0)
             if (int(N) - count) <= 0:
                 matrix_2.append(0)
                 break
