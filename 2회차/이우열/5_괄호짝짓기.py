@@ -5,7 +5,7 @@ sys.stdin = open("_괄호짝짓기.txt")
 open_b = ['(', '[', '{', '<']
 close_b = [')', ']', '}', '>']
 
-for i in range(1, 11):
+for i in range(1, 12):
     len_ = int(input())
     bracket = list(input())                                 # 확인할 괄호들을 입력받은 리스트
 
@@ -23,7 +23,7 @@ for i in range(1, 11):
                 check = False
                 break
 
-    if check == True:
+    if check == True and not stack_:
         print(f'#{i} 1')                                    # 결과가 True면 1 출력
     else:
         print(f'#{i} 0')                                    # 결과가 False면 0 출력
