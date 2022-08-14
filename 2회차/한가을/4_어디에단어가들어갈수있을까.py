@@ -21,12 +21,47 @@
 #8 0
 #9 98
 #10 7
+
 import sys
 sys.stdin = open("_어디에단어가들어갈수있을까.txt")
 
 T = int(input())
-board = []
 
-for tc in range(1, T + 1):
-    N, K = map(int, input().split())
-    board.append(list(map(int, input().split())))
+for tc in range(1,T+1):
+    N,K = map(int,input().split())
+    arr = []
+
+    for i in range(N):
+        arr.append(list(map(int, input().split())))
+
+    #배열 받기
+    result = 0
+    cnt = 0
+
+    #가로 탐색
+    for x in range(N):
+        # 행(x) 기준
+        for y in range(N):
+            if arr[x][y] == 1:
+                cnt += 1
+            # 0을 만났거나 벽을 만났을 때
+            if arr[x][y] == 0 or y == N-1:
+                # 이전에 계산한 카운트가 k라면 result에 카운트
+                if cnt == K:
+                    result += 1
+                # 카운트 초기화
+                cnt = 0
+
+    # 세로 탐색
+    for y in range(N):
+        # 열(y)기준
+        for x in range(N):
+            #1이면 카운트
+            if arr[x][y] == 1:
+                cnt += 1
+            if arr[x][y] == 0 or x == N-1 :  
+                if cnt == K:
+                    result += 1
+                cnt = 0
+
+    print('#{} {}'.format(tc,result ))
