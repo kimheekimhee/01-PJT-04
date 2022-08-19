@@ -39,5 +39,3 @@ cnt=1
 for j in answer:
     print('#'+str(cnt),j)
     cnt+=1
-
-
